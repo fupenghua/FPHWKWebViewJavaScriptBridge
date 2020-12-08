@@ -17,7 +17,7 @@ public typealias JSBridgeResponseCallBack = (Any?) -> Void
 
 public typealias JSBridgeHandler = (jsMessage?, JSBridgeResponseCallBack?) -> Void
 
-public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
+open class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         
     private(set) lazy var webConfig: WKWebViewConfiguration? = WKWebViewConfiguration()
     fileprivate var userController: WKUserContentController? = WKUserContentController()
@@ -61,33 +61,33 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
     
     //MARK:---open method
     
-    public func setWebView(_ webView: WKWebView) {
+    open func setWebView(_ webView: WKWebView) {
         self.webView = webView
     }
     
-    public func registerHandler(name: String, handler: JSBridgeHandler?) {
+    open func registerHandler(name: String, handler: JSBridgeHandler?) {
         self.messageHandlers?[name] = handler
     }
     
-    public func removeHandler(name: String) {
+    open func removeHandler(name: String) {
         self.messageHandlers?.removeValue(forKey: name)
     }
     
-    public func callHandler(name: String) {
+    open func callHandler(name: String) {
         callHandler(name: name, data: nil, responseCallback: nil)
     }
     
-    public func callHandler(name: String, data: Any?) {
+    open func callHandler(name: String, data: Any?) {
         callHandler(name: name, data: data, responseCallback: nil)
     }
     
-    public func callHandler(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
+    open func callHandler(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
         sendData(name: name, data: data, responseCallback: responseCallback)
     }
     
     
     //MARK:---WKScriptMessageHandler delegate
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         let messageName = message.name
         if messageName == scriptMessageName {
             var body:jsMessage
