@@ -17,9 +17,9 @@ public typealias JSBridgeResponseCallBack = (Any?) -> Void
 
 public typealias JSBridgeHandler = (jsMessage?, JSBridgeResponseCallBack?) -> Void
 
-open class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
+public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         
-    private(set) lazy var webConfig: WKWebViewConfiguration? = WKWebViewConfiguration()
+    public private(set) lazy var webConfig: WKWebViewConfiguration? = WKWebViewConfiguration()
     fileprivate var userController: WKUserContentController? = WKUserContentController()
     
     /// message 队列
@@ -61,27 +61,27 @@ open class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
     
     //MARK:---open method
     
-    open func setWebView(_ webView: WKWebView) {
+    public func setWebView(_ webView: WKWebView) {
         self.webView = webView
     }
     
-    open func registerHandler(name: String, handler: JSBridgeHandler?) {
+    public func registerHandler(name: String, handler: JSBridgeHandler?) {
         self.messageHandlers?[name] = handler
     }
     
-    open func removeHandler(name: String) {
+    public func removeHandler(name: String) {
         self.messageHandlers?.removeValue(forKey: name)
     }
     
-    open func callHandler(name: String) {
+    public func callHandler(name: String) {
         callHandler(name: name, data: nil, responseCallback: nil)
     }
     
-    open func callHandler(name: String, data: Any?) {
+    public func callHandler(name: String, data: Any?) {
         callHandler(name: name, data: data, responseCallback: nil)
     }
     
-    open func callHandler(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
+    public func callHandler(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
         sendData(name: name, data: data, responseCallback: responseCallback)
     }
     

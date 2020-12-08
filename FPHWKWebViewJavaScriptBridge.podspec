@@ -30,8 +30,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'FPHWKWebViewJavaScriptBridge/*.{swift,bundle}'
-  
+  s.source_files = 'FPHWKWebViewJavaScriptBridge/*.{swift}'
+  s.resource     = 'FPHWKWebViewJavaScriptBridge/JSBridge.bundle'
+
   # s.resource_bundles = {
   #   'FPHWKWebViewJavaScriptBridge' => ['FPHWKWebViewJavaScriptBridge/Assets/*.png']
   # }
