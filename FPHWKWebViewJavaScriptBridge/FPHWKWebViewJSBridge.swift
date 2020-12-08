@@ -40,7 +40,7 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         userController?.removeScriptMessageHandler(forName: scriptMessageName)
         userController = nil
     }
-    public override init() {
+    override public init() {
         super.init()
         self.initConfig()
     }
