@@ -40,7 +40,7 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         userController?.removeScriptMessageHandler(forName: scriptMessageName)
         userController = nil
     }
-    override init() {
+    public override init() {
         super.init()
         self.initConfig()
     }
@@ -87,7 +87,7 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
     
     
     //MARK:---WKScriptMessageHandler delegate
-    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         let messageName = message.name
         if messageName == scriptMessageName {
             var body:jsMessage

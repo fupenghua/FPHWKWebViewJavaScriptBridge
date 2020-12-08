@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPHWKWebViewJavaScriptBridge'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'bridge for WKWebview.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'FPHWKWebViewJavaScriptBridge/*'
+  s.source_files = 'FPHWKWebViewJavaScriptBridge/*.{swift,bundle}'
   
   # s.resource_bundles = {
   #   'FPHWKWebViewJavaScriptBridge' => ['FPHWKWebViewJavaScriptBridge/Assets/*.png']
