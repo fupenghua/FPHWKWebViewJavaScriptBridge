@@ -209,7 +209,7 @@ extension WKWebViewJSBridge {
     }
     
     fileprivate func handlerJs() -> String {
-        let bundle = Bundle.main
+        let bundle = Bundle(for: Self.self)
         let curBundleDirectory = "JSBridge.bundle"
         let path = bundle.path(forResource: "WebViewJavaScriptBridge", ofType: "js", inDirectory: curBundleDirectory)
         var handlerJS: String = ""
