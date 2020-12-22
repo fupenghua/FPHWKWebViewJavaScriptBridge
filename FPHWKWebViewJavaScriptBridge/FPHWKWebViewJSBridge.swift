@@ -100,7 +100,7 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
             if message.body is JSMessage {
                 body = message.body as! JSMessage
             } else {
-                body = self.objectFromJSONString(jsString: message.body as! String) as JSMessage
+                body = self.objectFromJSONString(jsString: message.body as! String)
             }
             let responseId: String? = body["responseId"] as? String
             if responseId != nil {
