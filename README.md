@@ -31,12 +31,14 @@ fupenghua, 390908980@qq.com
  let bridge = WKWebViewJSBridge()
  
  bridge.setWebView(webView)
+ 
 `
 ### register  js调用native
 `
 bridge.registerHandler(name: "funcName") { (data, callback) in 
     
 }
+
 `
 ### callHanlder native调用js
 
