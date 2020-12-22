@@ -220,22 +220,19 @@ extension WKWebViewJSBridge {
         var handlerJS: String = ""
         do {
             try handlerJS = String(contentsOfFile: path!, encoding: .utf8)
-        } catch {
-            
-        }
+        } catch {}
         handlerJS = handlerJS.replacingOccurrences(of: "\n", with: "")
         return handlerJS
     }
     
     fileprivate func objectFromJSONString(jsString: String) -> JSMessage {
-        if let data = jsString.data(using: .utf8) {
-            let obj = try? JSONSerialization.jsonObject(with: data,
-                                                            options: .mutableContainers)
-            if let obj = obj as? JSMessage {
-                return obj
-            }
+        var obj: JSMessage
+        do {
+            try obj = JSONSerialization.jsonObject(with: jsString.data(using: .utf8)!, options: .mutableContainers) as! JSMessage
+        } catch  {
+            obj = JSMessage()
         }
-        return JSMessage()
+        return obj
     }
 }
 
