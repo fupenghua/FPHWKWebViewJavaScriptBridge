@@ -48,9 +48,7 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
     
     fileprivate weak var webView: WKWebView?
     deinit {
-        webView?.configuration.userContentController.removeScriptMessageHandler(forName: scriptMessageName)
         startupMessageQueue = nil
-        print("bridge deinit")
     }
     public override init() {
         super.init()
