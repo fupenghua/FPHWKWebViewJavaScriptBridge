@@ -29,6 +29,7 @@ fupenghua, 390908980@qq.com
 ### usage
 `
  let bridge = WKWebViewJSBridge()
+ 
  bridge.setWebView(webView)
 `
 ### register  js调用native
