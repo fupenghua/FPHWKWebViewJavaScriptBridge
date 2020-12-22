@@ -17,6 +17,8 @@ public typealias JSBridgeResponseCallBack = (Any?) -> Void
 
 public typealias JSBridgeHandler = (JSMessage?, JSBridgeResponseCallBack?) -> Void
 
+
+
 extension WKWebView: FBridgeExtended {}
 extension FBridgeExtension where ExtendedType: WKWebView {
     public func removeMessageHandler() {
@@ -26,6 +28,8 @@ extension FBridgeExtension where ExtendedType: WKWebView {
         self.type.configuration.userContentController.add(handler, name: scriptMessageName)
     }
 }
+
+
 
 public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         
@@ -223,13 +227,13 @@ extension WKWebViewJSBridge {
         return handlerJS
     }
     
-    fileprivate func objectFromJSONString(jsString: String) -> JSMessage {
+    fileprivate func objectFromJSONString(jsString: String) -> [String: Any] {
         if let data = jsString.data(using: .utf8) {
-            if let dict = try? JSONSerialization.jsonObject(with: data,
-                                                            options: .mutableContainers) as? JSMessage {
+            if let dict = (try? JSONSerialization.jsonObject(with: data,
+                                                            options: .mutableContainers)) as? [String: Any] {
                 return dict
             }
         }
-        return JSMessage()
+        return [String: Any]()
     }
 }
