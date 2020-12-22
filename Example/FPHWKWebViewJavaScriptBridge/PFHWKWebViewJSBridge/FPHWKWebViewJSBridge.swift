@@ -227,7 +227,7 @@ extension WKWebViewJSBridge {
         
         let data = jsString.data(using: .utf8)
         if let dict = try? JSONSerialization.jsonObject(with: data!,
-                                                        options: .mutableContainers) as? [String : Any] {
+                                                        options: .mutableContainers) as? JSMessage {
             return dict
         }
         return JSMessage()
