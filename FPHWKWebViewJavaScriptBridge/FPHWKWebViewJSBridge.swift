@@ -11,77 +11,81 @@ import Foundation
 fileprivate let scriptMessageName = "Bridge"
 fileprivate let bridgeLoaded = "bridgeLoaded"
 
-public typealias jsMessage = Dictionary<String, Any?>
+public typealias JSMessage = [String: Any]
 
 public typealias JSBridgeResponseCallBack = (Any?) -> Void
 
-public typealias JSBridgeHandler = (jsMessage?, JSBridgeResponseCallBack?) -> Void
+public typealias JSBridgeHandler = (JSMessage?, JSBridgeResponseCallBack?) -> Void
+
+extension WKWebView: FBridgeExtended {}
+extension FBridgeExtension where ExtendedType: WKWebView {
+    public func removeMessageHandler() {
+        self.type.configuration.userContentController.removeScriptMessageHandler(forName: scriptMessageName)
+    }
+    func addMessageHandler(_ handler: WKScriptMessageHandler) {
+        self.type.configuration.userContentController.add(handler, name: scriptMessageName)
+    }
+}
 
 public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         
-    public private(set) lazy var webConfig: WKWebViewConfiguration? = WKWebViewConfiguration()
-    fileprivate var userController: WKUserContentController? = WKUserContentController()
-    
     /// message 队列
-    fileprivate var startupMessageQueue: Array<jsMessage>?
+    fileprivate var startupMessageQueue: Array<JSMessage>?
     
-    fileprivate var messageHandlers: Dictionary<String, JSBridgeHandler?>?
+    fileprivate lazy var messageHandlers:Dictionary<String, JSBridgeHandler?> = {
+        var handlers = Dictionary<String, JSBridgeHandler?>()
+        let bridgeLoadedHandler: JSBridgeHandler = { [weak self]
+            (data, response) in
+            self?.dealWithMessageQuene()
+        }
+        handlers[bridgeLoaded] = bridgeLoadedHandler
+        return handlers
+    }()
     
-    fileprivate lazy var responseCallbacks: Dictionary<String, Any?>? = Dictionary()
+    fileprivate lazy var responseCallbacks = JSMessage()
     
     fileprivate var _uniqueId = 0
     
     fileprivate weak var webView: WKWebView?
     deinit {
-        messageHandlers = nil
-        responseCallbacks = nil
+        webView?.configuration.userContentController.removeScriptMessageHandler(forName: scriptMessageName)
         startupMessageQueue = nil
-        webConfig = nil
-        userController?.removeScriptMessageHandler(forName: scriptMessageName)
-        userController = nil
+        print("bridge deinit")
     }
-    override public init() {
+    public override init() {
         super.init()
         self.initConfig()
     }
+
     
     fileprivate func initConfig() {
         startupMessageQueue = Array()
-        userController?.add(self, name: scriptMessageName)
-        webConfig?.userContentController = self.userController!
-        if messageHandlers == nil {
-            messageHandlers = Dictionary()
-            let bridgeLoadedHandler: JSBridgeHandler = {
-                (data, response) in
-                self.dealWithMessageQuene()
-            }
-            messageHandlers![bridgeLoaded] = bridgeLoadedHandler
-        }
     }
     
     //MARK:---open method
     
-    public func setWebView(_ webView: WKWebView) {
+    open func setWebView(_ webView: WKWebView) {
         self.webView = webView
+        addScriptMessageHandler()
     }
     
-    public func registerHandler(name: String, handler: JSBridgeHandler?) {
-        self.messageHandlers?[name] = handler
+    open func registerHandler(name: String, handler: JSBridgeHandler?) {
+        self.messageHandlers[name] = handler
     }
     
-    public func removeHandler(name: String) {
-        self.messageHandlers?.removeValue(forKey: name)
+    open func removeHandler(name: String) {
+        self.messageHandlers.removeValue(forKey: name)
     }
     
-    public func callHandler(name: String) {
+    open func callHandler(name: String) {
         callHandler(name: name, data: nil, responseCallback: nil)
     }
     
-    public func callHandler(name: String, data: Any?) {
+    open func callHandler(name: String, data: Any?) {
         callHandler(name: name, data: data, responseCallback: nil)
     }
     
-    public func callHandler(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
+    open func callHandler(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
         sendData(name: name, data: data, responseCallback: responseCallback)
     }
     
@@ -90,11 +94,11 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         let messageName = message.name
         if messageName == scriptMessageName {
-            var body:jsMessage
-            if message.body is jsMessage {
-                body = message.body as! jsMessage
+            var body:JSMessage
+            if message.body is JSMessage {
+                body = message.body as! JSMessage
             } else {
-                body = self.objectFromJSONString(jsString: message.body as! String)
+                body = self.objectFromJSONString(jsString: message.body as! String) as JSMessage
             }
             let responseId: String? = body["responseId"] as? String
             if responseId != nil {
@@ -107,27 +111,27 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         }
     }
     fileprivate func performCallback(_ responseId: String, _ responseData: Any?) {
-        let handler: JSBridgeResponseCallBack? = self.responseCallbacks?[responseId] as? JSBridgeResponseCallBack
+        let handler: JSBridgeResponseCallBack? = self.responseCallbacks[responseId] as? JSBridgeResponseCallBack
         handler?(responseData as Any?)
-        self.responseCallbacks?.removeValue(forKey: responseId)
+        self.responseCallbacks.removeValue(forKey: responseId)
     }
     
-    fileprivate func performHanlder(body: Dictionary<String, Any?>) {
-        if let handlerName: String = body["handlerName"] as? String {
-            let handler: JSBridgeHandler? = self.messageHandlers?[handlerName] as? JSBridgeHandler
-            if handler != nil {
-                let params: jsMessage? = body["data"] as? jsMessage
+    fileprivate func performHanlder(body: JSMessage) {
+        if let handlerName = body["handlerName"] as? String {
+            
+            if let handler = self.messageHandlers[handlerName] {
+                let params: JSMessage? = body["data"] as? JSMessage
                 var responseCallback: JSBridgeResponseCallBack = {
                     responseData in
                 }
                 
                 if let callbackId: String = body["callbackId"] as? String {
-                    responseCallback = { responseData in
+                    responseCallback = {[weak self] responseData in
                         let message = [
                             "responseId": callbackId,
                             "responseData":responseData
                         ]
-                        self.queueMessage(message: message)
+                        self?.queueMessage(message: message as JSMessage)
                     }
                 }
                 handler!(params, responseCallback)
@@ -138,6 +142,10 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
 }
 
 extension WKWebViewJSBridge {
+    
+    fileprivate func addScriptMessageHandler() {
+        self.webView?.bridge.addMessageHandler(self)
+    }
     
     //MARK:---private method
     fileprivate func dealWithMessageQuene() {
@@ -153,19 +161,19 @@ extension WKWebViewJSBridge {
     }
     
     fileprivate func sendData(name: String, data: Any?, responseCallback: JSBridgeResponseCallBack?) {
-        var message = Dictionary<String, Any?>()
+        var message = JSMessage()
         message["handlerName"] = name
         message["data"] = data
         if responseCallback != nil {
             _uniqueId = _uniqueId + 1
             let callbackId = "objc_cb_\(_uniqueId)"
-            self.responseCallbacks?[callbackId] = responseCallback
+            self.responseCallbacks[callbackId] = responseCallback
             message["callbackId"] = callbackId
         }
         queueMessage(message: message)
     }
     
-    fileprivate func queueMessage(message: Dictionary<String, Any?>) {
+    fileprivate func queueMessage(message: JSMessage) {
         if self.startupMessageQueue != nil {
             self.startupMessageQueue?.append(message)
         } else {
@@ -173,7 +181,7 @@ extension WKWebViewJSBridge {
         }
     }
     
-    fileprivate func _dispatchMessage(message: Dictionary<String, Any?>) {
+    fileprivate func _dispatchMessage(message: JSMessage) {
         var messageJson = serializeMessage(message: message)
         messageJson = messageJson.replacingOccurrences(of: "\\u0000", with: "")
         messageJson = messageJson.replacingOccurrences(of: "\\", with: "\\\\")
@@ -197,15 +205,10 @@ extension WKWebViewJSBridge {
 }
 
 extension WKWebViewJSBridge {
-    fileprivate func serializeMessage(message: jsMessage) -> String {
-        var data: Data
-            
-            do {
-                try data = JSONSerialization.data(withJSONObject: message, options: .fragmentsAllowed)
-            } catch  {
-                return ""
-            }
-        return String(data: data, encoding: .utf8) ?? ""
+    fileprivate func serializeMessage(message: JSMessage) -> String {
+        let data = try? JSONSerialization.data(withJSONObject: message, options: [])
+        let str = String(data: data!, encoding: String.Encoding.utf8)
+        return str ?? ""
     }
     
     fileprivate func handlerJs() -> String {
@@ -221,14 +224,14 @@ extension WKWebViewJSBridge {
         handlerJS = handlerJS.replacingOccurrences(of: "\n", with: "")
         return handlerJS
     }
-    fileprivate func objectFromJSONString(jsString: String) -> Dictionary<String, Any?> {
-        var obj = Dictionary<String, Any?>()
-        
-        do {
-            try obj = JSONSerialization.jsonObject(with: jsString.data(using: .utf8)!, options: .mutableContainers) as! Dictionary<String, Any?>
-        } catch  {
     
+    fileprivate func objectFromJSONString(jsString: String) -> JSMessage {
+        
+        let data = jsString.data(using: .utf8)
+        if let dict = try? JSONSerialization.jsonObject(with: data!,
+                                                        options: .mutableContainers) as? [String : Any] {
+            return dict
         }
-        return obj
+        return JSMessage()
     }
 }

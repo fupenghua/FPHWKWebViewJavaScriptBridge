@@ -26,4 +26,21 @@ fupenghua, 390908980@qq.com
 
 ## License
 
-FPHWKWebViewJavaScriptBridge is available under the MIT license. See the LICENSE file for more info.
+### usage
+`
+ let bridge = WKWebViewJSBridge()
+ bridge.setWebView(webView)
+`
+### register  js调用native
+`
+bridge.registerHandler(name: "funcName") { (data, callback) in 
+    
+}
+`
+### callHanlder native调用js
+
+`
+bridge.callHandler(name: "funcName", data: data)
+`
+在webView的deinit中一定要调用`self.bridge.removeMessageHandler()`，不然bridge会释放不掉
+

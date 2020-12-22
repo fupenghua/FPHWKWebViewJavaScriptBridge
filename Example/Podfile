@@ -1,6 +1,0 @@
-use_frameworks!
-target 'FPHWKWebViewJavaScriptBridge_Tests' do
-  pod 'FPHWKWebViewJavaScriptBridge', :path => '../'
-  
-  
-end

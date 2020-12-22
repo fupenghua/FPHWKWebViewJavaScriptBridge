@@ -1,6 +1,0 @@
-framework module FPHWKWebViewJavaScriptBridge {
-  umbrella header "FPHWKWebViewJavaScriptBridge-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -3,161 +3,268 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6BCB69745186A04EDB9B8C46 /* Pods_FPHWKWebViewJavaScriptBridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFFFBFC2277E71BFD508FC9 /* Pods_FPHWKWebViewJavaScriptBridge_Tests.framework */; };
+		0431F3F2259040FF0096BCC5 /* FBridgeExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431F3F1259040FF0096BCC5 /* FBridgeExtended.swift */; };
+		049E161924D2D513002FB519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E161824D2D513002FB519 /* AppDelegate.swift */; };
+		049E161D24D2D513002FB519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E161C24D2D513002FB519 /* ViewController.swift */; };
+		049E162224D2D514002FB519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049E162124D2D514002FB519 /* Assets.xcassets */; };
+		049E162524D2D514002FB519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E162324D2D514002FB519 /* LaunchScreen.storyboard */; };
+		049E163024D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E162F24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.swift */; };
+		049E163B24D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E163A24D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.swift */; };
+		049E164C24D2D73B002FB519 /* JSBridge.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 049E164B24D2D73B002FB519 /* JSBridge.bundle */; };
+		049E164E24D2D75C002FB519 /* FPHWKWebViewJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E164D24D2D75C002FB519 /* FPHWKWebViewJSBridge.swift */; };
+		049E165424D2DA62002FB519 /* FPHWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E165324D2DA61002FB519 /* FPHWKWebView.swift */; };
+		049E165624D2DA8A002FB519 /* FPHJSBridgeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E165524D2DA8A002FB519 /* FPHJSBridgeManager.swift */; };
+		049E165824D2DC35002FB519 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E165724D2DC35002FB519 /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		049E162C24D2D514002FB519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049E160D24D2D512002FB519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049E161424D2D512002FB519;
+			remoteInfo = FPHWKWebViewJavaScriptBridge;
+		};
+		049E163724D2D515002FB519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049E160D24D2D512002FB519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049E161424D2D512002FB519;
+			remoteInfo = FPHWKWebViewJavaScriptBridge;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0EEDC3D512ADD54A69A08BF0 /* Pods-FPHWKWebViewJavaScriptBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPHWKWebViewJavaScriptBridge_Tests.release.xcconfig"; path = "Target Support Files/Pods-FPHWKWebViewJavaScriptBridge_Tests/Pods-FPHWKWebViewJavaScriptBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1FD0BD3E5605B8B000132A2D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		2BFFFBFC2277E71BFD508FC9 /* Pods_FPHWKWebViewJavaScriptBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPHWKWebViewJavaScriptBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACE51AFB9204008FA782 /* FPHWKWebViewJavaScriptBridge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPHWKWebViewJavaScriptBridge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		62814121D941A62DDED825ED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		857DE3D22C957C49BD5C6E8D /* Pods-FPHWKWebViewJavaScriptBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPHWKWebViewJavaScriptBridge_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FPHWKWebViewJavaScriptBridge_Tests/Pods-FPHWKWebViewJavaScriptBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F5B008C0AA67438465D28852 /* FPHWKWebViewJavaScriptBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FPHWKWebViewJavaScriptBridge.podspec; path = ../FPHWKWebViewJavaScriptBridge.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0431F3F1259040FF0096BCC5 /* FBridgeExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBridgeExtended.swift; sourceTree = "<group>"; };
+		049E161524D2D512002FB519 /* FPHWKWebViewJavaScriptBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPHWKWebViewJavaScriptBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		049E161824D2D513002FB519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		049E161C24D2D513002FB519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		049E162124D2D514002FB519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		049E162424D2D514002FB519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		049E162624D2D514002FB519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049E162B24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPHWKWebViewJavaScriptBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		049E162F24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHWKWebViewJavaScriptBridgeTests.swift; sourceTree = "<group>"; };
+		049E163124D2D514002FB519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049E163624D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPHWKWebViewJavaScriptBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		049E163A24D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHWKWebViewJavaScriptBridgeUITests.swift; sourceTree = "<group>"; };
+		049E163C24D2D515002FB519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049E164B24D2D73B002FB519 /* JSBridge.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JSBridge.bundle; sourceTree = "<group>"; };
+		049E164D24D2D75C002FB519 /* FPHWKWebViewJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHWKWebViewJSBridge.swift; sourceTree = "<group>"; };
+		049E165324D2DA61002FB519 /* FPHWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHWKWebView.swift; sourceTree = "<group>"; };
+		049E165524D2DA8A002FB519 /* FPHJSBridgeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHJSBridgeManager.swift; sourceTree = "<group>"; };
+		049E165724D2DC35002FB519 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
+		049E161224D2D512002FB519 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCB69745186A04EDB9B8C46 /* Pods_FPHWKWebViewJavaScriptBridge_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049E162824D2D514002FB519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049E163324D2D515002FB519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		607FACC71AFB9204008FA782 = {
+		049E160C24D2D512002FB519 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACE81AFB9204008FA782 /* Tests */,
-				607FACD11AFB9204008FA782 /* Products */,
-				895096E9DF3579DB23BDF06C /* Pods */,
-				C99238119F9CC68AD1104E59 /* Frameworks */,
+				049E161724D2D512002FB519 /* FPHWKWebViewJavaScriptBridge */,
+				049E162E24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests */,
+				049E163924D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests */,
+				049E161624D2D512002FB519 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		607FACD11AFB9204008FA782 /* Products */ = {
+		049E161624D2D512002FB519 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE51AFB9204008FA782 /* FPHWKWebViewJavaScriptBridge_Tests.xctest */,
+				049E161524D2D512002FB519 /* FPHWKWebViewJavaScriptBridge.app */,
+				049E162B24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.xctest */,
+				049E163624D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
+		049E161724D2D512002FB519 /* FPHWKWebViewJavaScriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
+				049E164824D2D6A7002FB519 /* PFHWKWebViewJSBridge */,
+				049E161824D2D513002FB519 /* AppDelegate.swift */,
+				049E161C24D2D513002FB519 /* ViewController.swift */,
+				049E165324D2DA61002FB519 /* FPHWKWebView.swift */,
+				049E165524D2DA8A002FB519 /* FPHJSBridgeManager.swift */,
+				049E165724D2DC35002FB519 /* WebViewViewController.swift */,
+				049E162124D2D514002FB519 /* Assets.xcassets */,
+				049E162324D2D514002FB519 /* LaunchScreen.storyboard */,
+				049E162624D2D514002FB519 /* Info.plist */,
 			);
-			path = Tests;
+			path = FPHWKWebViewJavaScriptBridge;
 			sourceTree = "<group>";
 		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+		049E162E24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
+				049E162F24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.swift */,
+				049E163124D2D514002FB519 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = FPHWKWebViewJavaScriptBridgeTests;
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+		049E163924D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F5B008C0AA67438465D28852 /* FPHWKWebViewJavaScriptBridge.podspec */,
-				62814121D941A62DDED825ED /* README.md */,
-				1FD0BD3E5605B8B000132A2D /* LICENSE */,
+				049E163A24D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.swift */,
+				049E163C24D2D515002FB519 /* Info.plist */,
 			);
-			name = "Podspec Metadata";
+			path = FPHWKWebViewJavaScriptBridgeUITests;
 			sourceTree = "<group>";
 		};
-		895096E9DF3579DB23BDF06C /* Pods */ = {
+		049E164824D2D6A7002FB519 /* PFHWKWebViewJSBridge */ = {
 			isa = PBXGroup;
 			children = (
-				857DE3D22C957C49BD5C6E8D /* Pods-FPHWKWebViewJavaScriptBridge_Tests.debug.xcconfig */,
-				0EEDC3D512ADD54A69A08BF0 /* Pods-FPHWKWebViewJavaScriptBridge_Tests.release.xcconfig */,
+				049E164D24D2D75C002FB519 /* FPHWKWebViewJSBridge.swift */,
+				0431F3F1259040FF0096BCC5 /* FBridgeExtended.swift */,
+				049E164B24D2D73B002FB519 /* JSBridge.bundle */,
 			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		C99238119F9CC68AD1104E59 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2BFFFBFC2277E71BFD508FC9 /* Pods_FPHWKWebViewJavaScriptBridge_Tests.framework */,
-			);
-			name = Frameworks;
+			path = PFHWKWebViewJSBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACE41AFB9204008FA782 /* FPHWKWebViewJavaScriptBridge_Tests */ = {
+		049E161424D2D512002FB519 /* FPHWKWebViewJavaScriptBridge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridge_Tests" */;
+			buildConfigurationList = 049E163F24D2D515002FB519 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridge" */;
 			buildPhases = (
-				0C5E165CF6F4AF3E55DA20B3 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				F445870160B8D0EB4228930A /* [CP] Embed Pods Frameworks */,
+				049E161124D2D512002FB519 /* Sources */,
+				049E161224D2D512002FB519 /* Frameworks */,
+				049E161324D2D512002FB519 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FPHWKWebViewJavaScriptBridge_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* FPHWKWebViewJavaScriptBridge_Tests.xctest */;
+			name = FPHWKWebViewJavaScriptBridge;
+			productName = FPHWKWebViewJavaScriptBridge;
+			productReference = 049E161524D2D512002FB519 /* FPHWKWebViewJavaScriptBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		049E162A24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049E164224D2D515002FB519 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridgeTests" */;
+			buildPhases = (
+				049E162724D2D514002FB519 /* Sources */,
+				049E162824D2D514002FB519 /* Frameworks */,
+				049E162924D2D514002FB519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				049E162D24D2D514002FB519 /* PBXTargetDependency */,
+			);
+			name = FPHWKWebViewJavaScriptBridgeTests;
+			productName = FPHWKWebViewJavaScriptBridgeTests;
+			productReference = 049E162B24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		049E163524D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049E164524D2D515002FB519 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridgeUITests" */;
+			buildPhases = (
+				049E163224D2D515002FB519 /* Sources */,
+				049E163324D2D515002FB519 /* Frameworks */,
+				049E163424D2D515002FB519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				049E163824D2D515002FB519 /* PBXTargetDependency */,
+			);
+			name = FPHWKWebViewJavaScriptBridgeUITests;
+			productName = FPHWKWebViewJavaScriptBridgeUITests;
+			productReference = 049E163624D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		607FACC81AFB9204008FA782 /* Project object */ = {
+		049E160D24D2D512002FB519 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = CocoaPods;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
+					049E161424D2D512002FB519 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					049E162A24D2D514002FB519 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 049E161424D2D512002FB519;
+					};
+					049E163524D2D515002FB519 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 049E161424D2D512002FB519;
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FPHWKWebViewJavaScriptBridge" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 049E161024D2D512002FB519 /* Build configuration list for PBXProject "FPHWKWebViewJavaScriptBridge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
-			mainGroup = 607FACC71AFB9204008FA782;
-			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			mainGroup = 049E160C24D2D512002FB519;
+			productRefGroup = 049E161624D2D512002FB519 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACE41AFB9204008FA782 /* FPHWKWebViewJavaScriptBridge_Tests */,
+				049E161424D2D512002FB519 /* FPHWKWebViewJavaScriptBridge */,
+				049E162A24D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests */,
+				049E163524D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		607FACE31AFB9204008FA782 /* Resources */ = {
+		049E161324D2D512002FB519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049E162524D2D514002FB519 /* LaunchScreen.storyboard in Resources */,
+				049E164C24D2D73B002FB519 /* JSBridge.bundle in Resources */,
+				049E162224D2D514002FB519 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049E162924D2D514002FB519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049E163424D2D515002FB519 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,92 +273,102 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0C5E165CF6F4AF3E55DA20B3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FPHWKWebViewJavaScriptBridge_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F445870160B8D0EB4228930A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FPHWKWebViewJavaScriptBridge_Tests/Pods-FPHWKWebViewJavaScriptBridge_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FPHWKWebViewJavaScriptBridge/FPHWKWebViewJavaScriptBridge.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPHWKWebViewJavaScriptBridge.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FPHWKWebViewJavaScriptBridge_Tests/Pods-FPHWKWebViewJavaScriptBridge_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		607FACE11AFB9204008FA782 /* Sources */ = {
+		049E161124D2D512002FB519 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				049E165624D2DA8A002FB519 /* FPHJSBridgeManager.swift in Sources */,
+				049E161D24D2D513002FB519 /* ViewController.swift in Sources */,
+				049E161924D2D513002FB519 /* AppDelegate.swift in Sources */,
+				049E165424D2DA62002FB519 /* FPHWKWebView.swift in Sources */,
+				049E165824D2DC35002FB519 /* WebViewViewController.swift in Sources */,
+				049E164E24D2D75C002FB519 /* FPHWKWebViewJSBridge.swift in Sources */,
+				0431F3F2259040FF0096BCC5 /* FBridgeExtended.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049E162724D2D514002FB519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049E163024D2D514002FB519 /* FPHWKWebViewJavaScriptBridgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049E163224D2D515002FB519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049E163B24D2D515002FB519 /* FPHWKWebViewJavaScriptBridgeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		049E162D24D2D514002FB519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049E161424D2D512002FB519 /* FPHWKWebViewJavaScriptBridge */;
+			targetProxy = 049E162C24D2D514002FB519 /* PBXContainerItemProxy */;
+		};
+		049E163824D2D515002FB519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049E161424D2D512002FB519 /* FPHWKWebViewJavaScriptBridge */;
+			targetProxy = 049E163724D2D515002FB519 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		049E162324D2D514002FB519 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049E162424D2D514002FB519 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		607FACED1AFB9204008FA782 /* Debug */ = {
+		049E163D24D2D515002FB519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -259,52 +376,60 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		607FACEE1AFB9204008FA782 /* Release */ = {
+		049E163E24D2D515002FB519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -312,76 +437,180 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
+		049E164024D2D515002FB519 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 857DE3D22C957C49BD5C6E8D /* Pods-FPHWKWebViewJavaScriptBridge_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SY4J245Z;
+				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thebeastshop.JavaScriptBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPHWKWebViewJavaScriptBridge_Example.app/FPHWKWebViewJavaScriptBridge_Example";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		607FACF41AFB9204008FA782 /* Release */ = {
+		049E164124D2D515002FB519 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EEDC3D512ADD54A69A08BF0 /* Pods-FPHWKWebViewJavaScriptBridge_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SY4J245Z;
+				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thebeastshop.JavaScriptBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPHWKWebViewJavaScriptBridge_Example.app/FPHWKWebViewJavaScriptBridge_Example";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		049E164324D2D515002FB519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SY4J245Z;
+				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thebeastshop.FPHWKWebViewJavaScriptBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPHWKWebViewJavaScriptBridge.app/FPHWKWebViewJavaScriptBridge";
+			};
+			name = Debug;
+		};
+		049E164424D2D515002FB519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SY4J245Z;
+				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thebeastshop.FPHWKWebViewJavaScriptBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPHWKWebViewJavaScriptBridge.app/FPHWKWebViewJavaScriptBridge";
+			};
+			name = Release;
+		};
+		049E164624D2D515002FB519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SY4J245Z;
+				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thebeastshop.FPHWKWebViewJavaScriptBridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FPHWKWebViewJavaScriptBridge;
+			};
+			name = Debug;
+		};
+		049E164724D2D515002FB519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SY4J245Z;
+				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thebeastshop.FPHWKWebViewJavaScriptBridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FPHWKWebViewJavaScriptBridge;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FPHWKWebViewJavaScriptBridge" */ = {
+		049E161024D2D512002FB519 /* Build configuration list for PBXProject "FPHWKWebViewJavaScriptBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				607FACED1AFB9204008FA782 /* Debug */,
-				607FACEE1AFB9204008FA782 /* Release */,
+				049E163D24D2D515002FB519 /* Debug */,
+				049E163E24D2D515002FB519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridge_Tests" */ = {
+		049E163F24D2D515002FB519 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
+				049E164024D2D515002FB519 /* Debug */,
+				049E164124D2D515002FB519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049E164224D2D515002FB519 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049E164324D2D515002FB519 /* Debug */,
+				049E164424D2D515002FB519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049E164524D2D515002FB519 /* Build configuration list for PBXNativeTarget "FPHWKWebViewJavaScriptBridgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049E164624D2D515002FB519 /* Debug */,
+				049E164724D2D515002FB519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+	rootObject = 049E160D24D2D512002FB519 /* Project object */;
 }
