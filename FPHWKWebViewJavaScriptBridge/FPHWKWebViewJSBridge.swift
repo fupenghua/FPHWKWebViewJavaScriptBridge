@@ -234,6 +234,7 @@ extension WKWebViewJSBridge {
                 return dict
             }
         }
-        return [String: Any]()
+        return [String: Any]()!
     }
 }
+
