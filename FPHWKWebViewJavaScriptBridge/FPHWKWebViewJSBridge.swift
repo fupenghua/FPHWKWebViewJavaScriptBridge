@@ -227,14 +227,15 @@ extension WKWebViewJSBridge {
         return handlerJS
     }
     
-    fileprivate func objectFromJSONString(jsString: String) -> [String: Any] {
+    fileprivate func objectFromJSONString(jsString: String) -> JSMessage {
         if let data = jsString.data(using: .utf8) {
-            if let dict = (try? JSONSerialization.jsonObject(with: data,
-                                                            options: .mutableContainers)) as? [String: Any] {
-                return dict
+            let obj = try? JSONSerialization.jsonObject(with: data,
+                                                            options: .mutableContainers)
+            if let obj = obj as? JSMessage {
+                return obj
             }
         }
-        return [String: Any]()!
+        return JSMessage()
     }
 }
 
