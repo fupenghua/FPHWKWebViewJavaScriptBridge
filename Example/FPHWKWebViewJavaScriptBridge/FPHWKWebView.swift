@@ -22,9 +22,16 @@ class FPHWKWebView: WKWebView {
     }
     
     class func webView(_ frame: CGRect = .zero) -> FPHWKWebView {
-        let web = FPHWKWebView(frame: frame)
-        web.configWebView()
-        return web
+        return FPHWKWebView(frame: frame)
+    }
+    
+    override init(frame: CGRect, configuration: WKWebViewConfiguration) {
+        super.init(frame: frame, configuration: configuration)
+        configWebView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func configWebView() {

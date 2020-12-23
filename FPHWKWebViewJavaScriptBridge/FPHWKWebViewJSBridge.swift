@@ -58,7 +58,6 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         super.init()
         self.initConfig()
     }
-
     
     fileprivate func initConfig() {
         startupMessageQueue = Array()
@@ -102,10 +101,10 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
             } else {
                 body = self.objectFromJSONString(jsString: message.body as! String)
             }
-            let responseId: String? = body["responseId"] as? String
-            if responseId != nil {
+            
+            if let responseId = body["responseId"] as? String {
                 let responseData: Any? = body["responseData"] as Any?
-                self.performCallback(responseId!, responseData)
+                self.performCallback(responseId, responseData)
             } else {
                 performHanlder(body: body)
             }
@@ -191,7 +190,7 @@ extension WKWebViewJSBridge {
         messageJson = messageJson.replacingOccurrences(of: "\'", with: "\\\'")
         messageJson = messageJson.replacingOccurrences(of: "\n", with: "\\n")
         messageJson = messageJson.replacingOccurrences(of: "\r", with: "\\r")
-        let javascriptCommand = "WebViewJavascriptBridge._handleMessageFromNative('\(messageJson)';"
+        let javascriptCommand = "WebViewJavascriptBridge._handleMessageFromNative('\(messageJson)');"
         if Thread.current.isMainThread {
             evaluateJavascript(javascriptCommand: javascriptCommand)
         } else {
