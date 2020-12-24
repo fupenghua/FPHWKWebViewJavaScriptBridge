@@ -190,7 +190,7 @@ extension WKWebViewJSBridge {
         messageJson = messageJson.replacingOccurrences(of: "\'", with: "\\\'")
         messageJson = messageJson.replacingOccurrences(of: "\n", with: "\\n")
         messageJson = messageJson.replacingOccurrences(of: "\r", with: "\\r")
-        let javascriptCommand = "WebViewJavascriptBridge._handleMessageFromNative('\(messageJson)');"
+        let javascriptCommand = "WebViewJavascriptBridge._handleMessageFromNative(\"\(messageJson)\");"
         if Thread.current.isMainThread {
             evaluateJavascript(javascriptCommand: javascriptCommand)
         } else {
