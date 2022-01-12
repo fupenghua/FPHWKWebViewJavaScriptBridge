@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0431F40A2591BC820096BCC5 /* FPHWKWebViewJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431F4072591BC820096BCC5 /* FPHWKWebViewJSBridge.swift */; };
-		0431F40B2591BC820096BCC5 /* FBridgeExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431F4082591BC820096BCC5 /* FBridgeExtended.swift */; };
 		0431F40C2591BC820096BCC5 /* JSBridge.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0431F4092591BC820096BCC5 /* JSBridge.bundle */; };
 		049E161924D2D513002FB519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E161824D2D513002FB519 /* AppDelegate.swift */; };
 		049E161D24D2D513002FB519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E161C24D2D513002FB519 /* ViewController.swift */; };
@@ -19,6 +17,11 @@
 		049E165424D2DA62002FB519 /* FPHWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E165324D2DA61002FB519 /* FPHWKWebView.swift */; };
 		049E165624D2DA8A002FB519 /* FPHJSBridgeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E165524D2DA8A002FB519 /* FPHJSBridgeManager.swift */; };
 		049E165824D2DC35002FB519 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E165724D2DC35002FB519 /* WebViewViewController.swift */; };
+		DCD03CC6278EB7E5007946D1 /* FBridgeExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CC4278EB7E5007946D1 /* FBridgeExtended.swift */; };
+		DCD03CC7278EB7E5007946D1 /* FWKWebViewJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CC5278EB7E5007946D1 /* FWKWebViewJSBridge.swift */; };
+		DCD03CC9278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CC8278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift */; };
+		DCD03CCB278ECB90007946D1 /* WKWebviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CCA278ECB90007946D1 /* WKWebviewExtension.swift */; };
+		DCD03CCD278ECC2D007946D1 /* FTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CCC278ECC2D007946D1 /* FTypealias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0431F4072591BC820096BCC5 /* FPHWKWebViewJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPHWKWebViewJSBridge.swift; sourceTree = "<group>"; };
-		0431F4082591BC820096BCC5 /* FBridgeExtended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBridgeExtended.swift; sourceTree = "<group>"; };
 		0431F4092591BC820096BCC5 /* JSBridge.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JSBridge.bundle; sourceTree = "<group>"; };
 		049E161524D2D512002FB519 /* FPHWKWebViewJavaScriptBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPHWKWebViewJavaScriptBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049E161824D2D513002FB519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +58,11 @@
 		049E165324D2DA61002FB519 /* FPHWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHWKWebView.swift; sourceTree = "<group>"; };
 		049E165524D2DA8A002FB519 /* FPHJSBridgeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHJSBridgeManager.swift; sourceTree = "<group>"; };
 		049E165724D2DC35002FB519 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		DCD03CC4278EB7E5007946D1 /* FBridgeExtended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBridgeExtended.swift; sourceTree = "<group>"; };
+		DCD03CC5278EB7E5007946D1 /* FWKWebViewJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWKWebViewJSBridge.swift; sourceTree = "<group>"; };
+		DCD03CC8278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FJavaScriptMessageDispatch.swift; sourceTree = "<group>"; };
+		DCD03CCA278ECB90007946D1 /* WKWebviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebviewExtension.swift; sourceTree = "<group>"; };
+		DCD03CCC278ECC2D007946D1 /* FTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTypealias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +93,11 @@
 		0431F4062591BC820096BCC5 /* FPHWKWebViewJavaScriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				0431F4072591BC820096BCC5 /* FPHWKWebViewJSBridge.swift */,
-				0431F4082591BC820096BCC5 /* FBridgeExtended.swift */,
+				DCD03CCC278ECC2D007946D1 /* FTypealias.swift */,
+				DCD03CC4278EB7E5007946D1 /* FBridgeExtended.swift */,
+				DCD03CCA278ECB90007946D1 /* WKWebviewExtension.swift */,
+				DCD03CC5278EB7E5007946D1 /* FWKWebViewJSBridge.swift */,
+				DCD03CC8278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift */,
 				0431F4092591BC820096BCC5 /* JSBridge.bundle */,
 			);
 			name = FPHWKWebViewJavaScriptBridge;
@@ -279,13 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD03CC6278EB7E5007946D1 /* FBridgeExtended.swift in Sources */,
 				049E165624D2DA8A002FB519 /* FPHJSBridgeManager.swift in Sources */,
+				DCD03CC9278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift in Sources */,
+				DCD03CCD278ECC2D007946D1 /* FTypealias.swift in Sources */,
 				049E161D24D2D513002FB519 /* ViewController.swift in Sources */,
-				0431F40A2591BC820096BCC5 /* FPHWKWebViewJSBridge.swift in Sources */,
+				DCD03CCB278ECB90007946D1 /* WKWebviewExtension.swift in Sources */,
 				049E161924D2D513002FB519 /* AppDelegate.swift in Sources */,
 				049E165424D2DA62002FB519 /* FPHWKWebView.swift in Sources */,
+				DCD03CC7278EB7E5007946D1 /* FWKWebViewJSBridge.swift in Sources */,
 				049E165824D2DC35002FB519 /* WebViewViewController.swift in Sources */,
-				0431F40B2591BC820096BCC5 /* FBridgeExtended.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
