@@ -25,12 +25,12 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'fupenghua' => '390908980@qq.com' }
-  s.source           = { :git => 'https://github.com/fupenghua/FPHWKWebViewJavaScriptBridge.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:fupenghua/FPHWKWebViewJavaScriptBridge.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'FPHWKWebViewJavaScriptBridge/*.{swift}'
   s.resource     = 'FPHWKWebViewJavaScriptBridge/JSBridge.bundle'
-  s.public_header_files = 'FPHWKWebViewJavaScriptBridge/FWKWebViewJSBridge.swift'
+  # s.public_header_files = 'FPHWKWebViewJavaScriptBridge/FWKWebViewJSBridge.swift'
 end
