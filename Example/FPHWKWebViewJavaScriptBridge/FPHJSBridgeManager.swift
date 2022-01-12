@@ -17,8 +17,8 @@ class JSBridgeManager {
         config()
     }
     
-    fileprivate lazy var bridge: WKWebViewJSBridge = {
-        let bridge = WKWebViewJSBridge()
+    fileprivate lazy var bridge: FWKWebViewJSBridge = {
+        let bridge = FWKWebViewJSBridge()
         return bridge
     }()
     private weak var _currentController: UIViewController?

@@ -32,5 +32,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'FPHWKWebViewJavaScriptBridge/*.{swift}'
   s.resource     = 'FPHWKWebViewJavaScriptBridge/JSBridge.bundle'
-  # s.public_header_files = 'FPHWKWebViewJavaScriptBridge/FWKWebViewJSBridge.swift'
 end

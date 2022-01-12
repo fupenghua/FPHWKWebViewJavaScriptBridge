@@ -11,7 +11,7 @@ protocol FJavaScriptMessageDispatch {
     func evaluateJavascript(_ javascriptCommand: String)
 }
 
-extension FJavaScriptMessageDispatch where Self: WKWebViewJSBridge {
+extension FJavaScriptMessageDispatch where Self: FWKWebViewJSBridge {
     func sendJavaScriptCommand(_ message: JSMessage) {
         var messageJson = serializeMessage(message: message)
         messageJson = messageJson.replacingOccurrences(of: "\\u0000", with: "")

@@ -10,7 +10,7 @@ import Foundation
 
 fileprivate let bridgeLoaded = "bridgeLoaded"
 
-public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
+public class FWKWebViewJSBridge: NSObject, WKScriptMessageHandler {
         
     /// message 队列
     fileprivate var startupMessageQueue: [JSMessage]? = [JSMessage]()
@@ -108,7 +108,7 @@ public class WKWebViewJSBridge: NSObject, WKScriptMessageHandler {
     }
 }
 
-fileprivate extension WKWebViewJSBridge {
+fileprivate extension FWKWebViewJSBridge {
     func sendMessageQueue() {
         if let queue = startupMessageQueue {
             startupMessageQueue = nil
@@ -138,7 +138,7 @@ fileprivate extension WKWebViewJSBridge {
     }
 }
 
-extension WKWebViewJSBridge: FJavaScriptMessageDispatch {
+extension FWKWebViewJSBridge: FJavaScriptMessageDispatch {
     func evaluateJavascript(_ javascriptCommand: String) {
         webView?.evaluateJavaScript(javascriptCommand, completionHandler: nil)
     }

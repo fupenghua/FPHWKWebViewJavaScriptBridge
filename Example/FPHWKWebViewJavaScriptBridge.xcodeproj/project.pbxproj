@@ -20,7 +20,7 @@
 		DCD03CC6278EB7E5007946D1 /* FBridgeExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CC4278EB7E5007946D1 /* FBridgeExtended.swift */; };
 		DCD03CC7278EB7E5007946D1 /* FWKWebViewJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CC5278EB7E5007946D1 /* FWKWebViewJSBridge.swift */; };
 		DCD03CC9278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CC8278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift */; };
-		DCD03CCB278ECB90007946D1 /* WKWebviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CCA278ECB90007946D1 /* WKWebviewExtension.swift */; };
+		DCD03CCB278ECB90007946D1 /* FBridgeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CCA278ECB90007946D1 /* FBridgeExtension.swift */; };
 		DCD03CCD278ECC2D007946D1 /* FTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD03CCC278ECC2D007946D1 /* FTypealias.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 		DCD03CC4278EB7E5007946D1 /* FBridgeExtended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBridgeExtended.swift; sourceTree = "<group>"; };
 		DCD03CC5278EB7E5007946D1 /* FWKWebViewJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWKWebViewJSBridge.swift; sourceTree = "<group>"; };
 		DCD03CC8278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FJavaScriptMessageDispatch.swift; sourceTree = "<group>"; };
-		DCD03CCA278ECB90007946D1 /* WKWebviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebviewExtension.swift; sourceTree = "<group>"; };
+		DCD03CCA278ECB90007946D1 /* FBridgeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBridgeExtension.swift; sourceTree = "<group>"; };
 		DCD03CCC278ECC2D007946D1 /* FTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTypealias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,7 @@
 			children = (
 				DCD03CCC278ECC2D007946D1 /* FTypealias.swift */,
 				DCD03CC4278EB7E5007946D1 /* FBridgeExtended.swift */,
-				DCD03CCA278ECB90007946D1 /* WKWebviewExtension.swift */,
+				DCD03CCA278ECB90007946D1 /* FBridgeExtension.swift */,
 				DCD03CC5278EB7E5007946D1 /* FWKWebViewJSBridge.swift */,
 				DCD03CC8278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift */,
 				0431F4092591BC820096BCC5 /* JSBridge.bundle */,
@@ -293,7 +293,7 @@
 				DCD03CC9278EBA5B007946D1 /* FJavaScriptMessageDispatch.swift in Sources */,
 				DCD03CCD278ECC2D007946D1 /* FTypealias.swift in Sources */,
 				049E161D24D2D513002FB519 /* ViewController.swift in Sources */,
-				DCD03CCB278ECB90007946D1 /* WKWebviewExtension.swift in Sources */,
+				DCD03CCB278ECB90007946D1 /* FBridgeExtension.swift in Sources */,
 				049E161924D2D513002FB519 /* AppDelegate.swift in Sources */,
 				049E165424D2DA62002FB519 /* FPHWKWebView.swift in Sources */,
 				DCD03CC7278EB7E5007946D1 /* FWKWebViewJSBridge.swift in Sources */,
