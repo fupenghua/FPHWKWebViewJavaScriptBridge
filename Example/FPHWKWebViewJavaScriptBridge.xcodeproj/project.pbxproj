@@ -221,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					049E161424D2D512002FB519 = {
 						CreatedOnToolsVersion = 12.0;
@@ -468,7 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72SY4J245Z;
 				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridge/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72SY4J245Z;
 				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridge/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,7 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72SY4J245Z;
 				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridgeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72SY4J245Z;
 				INFOPLIST_FILE = FPHWKWebViewJavaScriptBridgeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
